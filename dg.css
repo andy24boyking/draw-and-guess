@@ -1,0 +1,11 @@
+canvas {
+	border:1px solid green;
+	/*cursor: crosshair;*/
+}
+}
+
+#redraw {
+	cursor: pointer;
+}
+
+/*url('cursors/handwriting.cur'),auto*/

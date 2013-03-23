@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title> 兔子专属你画我猜 </title>
+		<meta name="description" content="draw and guess" />
+		<meta name="keywords" content="draw, guess" />
+		<meta name="author" content="Andy24boyking" />
+		<link href="./dg.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" charset="utf-8" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" charset="utf-8" src="./dg_client.js"></script>
+	</head>
+	<body onload="onLoad();" onbeforeunload="return closeWindow();">
+		<h1>聊天室</h1>
+		<div id="login">
+			<h3>欢迎！</h3>
+			<input name="username" type="text" id="username" size="30" />&nbsp;&nbsp;
+			<input type="button" name="button" id="button_submit" value=" Login " onclick="login();"/>
+		</div>
+		<div id="dg" style="display:none;">
+			<h3>欢迎, <span id="uname"></span>&nbsp;!</h3> 
+			<div id="content"></div>
+			<br/>
+			<div id="send">
+				我对
+				<select name="selectUser" id="selectUser">
+					<option value ="all">所有人</option>
+				</select>&nbsp;说
+				<input name="say" type="text" id="say" size="60" onkeydown="enterPress(event);"/>
+			</div>
+		</div>
+	</body>
+</html>

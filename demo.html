@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+	<head>
+		<title> 你画我猜 </title>
+		<meta name="description" content="draw and guess" />
+		<meta name="keywords" content="draw, guess" />
+		<meta name="author" content="Andy24boyking" />
+		<link href="./dg.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" charset="utf-8" src="./demo.js"></script>
+	</head>
+	<body onload="onLoad();" onbeforeunload="return closeWindow();">
+		<canvas id="myCanvas" width="600" height="300"></canvas>
+		<br/>
+		<input type="button" id="clear" value="清空" onclick="draw.clear()"/>
+	</body>
+</html>
