@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<title> 你画我猜 </title>
+		<meta name="description" content="draw and guess" />
+		<meta name="keywords" content="draw, guess" />
+		<meta name="author" content="Andy24boyking" />
+		<link href="./dg.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" charset="utf-8" src="./drawbox.js"></script>
+		<script type="text/javascript" charset="utf-8" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" charset="utf-8" src="./dg_client.js"></script>
+	</head>
+	<body onload="onLoad();" onbeforeunload="return closeWindow();">
+		<h1>你画我猜</h1>
+		<div id="login" style="display:none;">
+			<h3>欢迎！</h3>
+			<input name="username" type="text" id="username" size="30" />&nbsp;&nbsp;
+			<input type="button" name="button" id="button_submit" value=" Login " onclick="login();"/>
+		</div>
+		<div id="dg">
+			<span id="uname"></span><br/>
+			<canvas id="myCanvas" width="600" height="400"></canvas>
+			<div id="content"></div><br/>
+			<input type="button" id="clear" value="清空" onclick="draw.clear();draw.clearAll()"/>
+			<input type="button" id="red" onclick="draw.setColor(id)"/>
+			<input type="button" id="yellow" onclick="draw.setColor(id)"/>
+			<input type="button" id="green" onclick="draw.setColor(id)"/>
+			<input type="button" id="blue" onclick="draw.setColor(id)"/>
+			<input type="button" id="brown" onclick="draw.setColor(id)"/>
+			<input type="button" id="orange" onclick="draw.setColor(id)"/>
+			<input type="button" id="purple" onclick="draw.setColor(id)"/>
+			<input type="button" id="black" onclick="draw.setColor(id)"/>
+			<input type="button" id="midnightblue" onclick="draw.setColor(id)"/>
+			<input type="button" id="setLineWidth" value="8" onclick="draw.setLineWidth(value)"/>
+		</div>
+	</body>
+</html>
