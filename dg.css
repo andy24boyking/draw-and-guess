@@ -3,7 +3,7 @@
 	margin: 0 auto;
 }
 canvas {
-	border:1px solid green;
+	border:1px solid #30c300;
 	/*cursor: crosshair;*/
 }
 #login {
@@ -13,12 +13,20 @@ canvas {
 #button_submit {
 	font-family:微软雅黑; font-size:13pt; color:white;
 	cursor:pointer;
-	width:100px; height:36px; border:0;
+	/*width:100px;*/ height:36px; border:0;
 	background-color:#30c300;}
 }
+
+a:link{color:#797878; text-decoration:none;}
+a:visited{color:#797878; text-decoration:none;}
+a:hover{color: #30c300; text-decoration:underline; cursor: pointer;}
+/*#createroom {
+	width:250px; height:200px;
+	border:1px solid green;
+}*/
 #content {
-	width:250px; height:400px;
-	border:1px solid #5f5f5f;
+	width:200px; height:400px;
+	border:1px solid #30c300;
 	font-family:微软雅黑;
 	overflow-y:scroll;
 }

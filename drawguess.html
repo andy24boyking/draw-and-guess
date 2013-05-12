@@ -10,15 +10,35 @@
 		<script type="text/javascript" charset="utf-8" src="/socket.io/socket.io.js"></script>
 		<script type="text/javascript" charset="utf-8" src="./dg_client.js"></script>
 	</head>
-	<body onload="onLoad();" onbeforeunload="return closeWindow();">
-		<h1>你画我猜</h1>
-		<div id="login" style="display:none;">
+	<body onload="onLoad();">
+		<h1>LOGO</h1>
+		<span id="uname"></span><br/>
+		<div id="login">
 			<h3>欢迎！</h3>
 			<input name="username" type="text" id="username" size="30" />&nbsp;&nbsp;
 			<input type="button" name="button" id="button_submit" value=" Login " onclick="login();"/>
 		</div>
-		<div id="dg">
-			<span id="uname"></span><br/>
+		<div id="room" style="display:none;">
+			<br/>
+			<input type="button" name="create" id="button_submit" value=" create room" onclick="createRoom();"/>
+			<br/>
+			<div id="createroom" style="display:none;">
+				选择房间人数:
+				<select name="playNum" id="playNum">
+					<option value = 2>2</option>
+					<option value = 3>3</option>
+					<option value = 4>4</option>
+					<option value = 5>5</option>
+					<option value = 6>6</option>
+					<option value = 7>7</option>
+				</select>
+				<br/>
+				<input type="button" name="submit" id="button_submit" value="ok" onclick="ok();"/>
+			</div>
+			<div id="list">
+			</div>
+		</div>
+		<div id="dg" style="display:none;">
 			<canvas id="myCanvas" width="600" height="400"></canvas>
 			<div id="content"></div><br/>
 			<input type="button" id="clear" value="清空" onclick="draw.clear();draw.clearAll()"/>
@@ -32,6 +52,10 @@
 			<input type="button" id="black" onclick="draw.setColor(id)"/>
 			<input type="button" id="midnightblue" onclick="draw.setColor(id)"/>
 			<input type="button" id="setLineWidth" value="8" onclick="draw.setLineWidth(value)"/>
+
+			<input type="button" id="" value="退出房间" onclick="exitRoom()"/>
+			<br/>
+			<div id="currentRoomlist"></div>
 		</div>
 	</body>
 </html>
